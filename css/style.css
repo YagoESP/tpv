@@ -1,0 +1,1299 @@
+@charset "UTF-8";
+/* //////////////////
+
+Para mesas
+
+*/
+.mesas {
+  width: 100%;
+  display: flex;
+}
+.mesas .eliminar-ticket {
+  display: none;
+}
+.mesas .eliminar-ticket.activado {
+  display: block;
+  border-radius: 0.3rem;
+  border: #8f9292 solid 1px;
+  height: 100%;
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  background: rgba(0, 0, 0, 0.5);
+  z-index: 1;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  padding-top: 2rem;
+}
+.mesas .eliminar-ticket .ticket {
+  width: 40%;
+  margin: auto;
+  background: white;
+  border-radius: 0.3rem;
+  border: #000000 solid 1px;
+}
+.mesas .eliminar-ticket .ticket .eliminar-ticket-titulo {
+  width: 90%;
+  margin: auto;
+  display: flex;
+  justify-content: space-between;
+}
+.mesas .eliminar-ticket .ticket .eliminar-ticket-descripcion {
+  text-align: center;
+  padding: 1rem;
+  border-top: #c8cbcc solid 1px;
+  border-bottom: #c8cbcc solid 1px;
+  width: 90%;
+}
+.mesas .eliminar-ticket .ticket .eliminar-ticket-botones {
+  text-align: end;
+  padding: 0.7rem;
+}
+.mesas .eliminar-ticket .ticket .eliminar-ticket-botones .ticket-btn-cerrar-e {
+  border: none;
+  border-radius: 0.3rem;
+  font-size: 1.2rem;
+  cursor: pointer;
+}
+.mesas .eliminar-ticket .ticket .eliminar-ticket-botones .ticket-btn-eliminar {
+  background: #198754;
+  border: none;
+  border-radius: 0.3rem;
+  color: white;
+  font-size: 1.2rem;
+  padding: 0.5rem;
+  cursor: pointer;
+}
+.mesas .cobrar-ticket {
+  display: none;
+}
+.mesas .cobrar-ticket.activado {
+  display: block;
+  border-radius: 0.3rem;
+  border: #8f9292 solid 1px;
+  height: 100%;
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  background: rgba(0, 0, 0, 0.5);
+  z-index: 1;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  padding-top: 2rem;
+}
+.mesas .cobrar-ticket .ticket {
+  width: 40%;
+  margin: auto;
+  background: white;
+  border-radius: 0.3rem;
+  border: #000000 solid 1px;
+}
+.mesas .cobrar-ticket .ticket .cobrar-ticket-titulo {
+  width: 90%;
+  margin: auto;
+  display: flex;
+  justify-content: space-between;
+}
+.mesas .cobrar-ticket .ticket .cobrar-ticket-pago {
+  text-align: center;
+  padding: 1rem;
+  border-top: #c8cbcc solid 1px;
+  border-bottom: #c8cbcc solid 1px;
+  width: 30%;
+  margin: auto;
+}
+.mesas .cobrar-ticket .ticket .cobrar-ticket-pago .ticket-btn-seleccionar {
+  width: 100%;
+  border: none;
+  border-radius: 0.3rem;
+  font-size: 1rem;
+  cursor: pointer;
+  background: #0069FD;
+  color: white;
+  padding: 0.5rem 2rem;
+  text-align: center;
+  margin-top: 0.4rem;
+}
+.mesas .cobrar-ticket .ticket .cobrar-ticket-botones {
+  text-align: end;
+  padding: 0.7rem;
+}
+.mesas .cobrar-ticket .ticket .cobrar-ticket-botones .ticket-btn-cerrar-c {
+  border: none;
+  border-radius: 0.3rem;
+  font-size: 1.2rem;
+  cursor: pointer;
+}
+.mesas .factura {
+  width: 35%;
+  margin-left: auto;
+}
+.mesas .factura .factura-titulo {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.mesas .factura .factura-contenido {
+  border: 2px solid rgb(194, 184, 184);
+  border-radius: 0.3rem;
+  text-align: center;
+}
+.mesas .factura .factura-precios {
+  display: flex;
+  width: 100%;
+  justify-content: space-between;
+  color: white;
+  margin: auto;
+  margin-top: 1rem;
+}
+.mesas .factura .factura-precios .b-imponible {
+  background: #6C757D;
+  width: 33%;
+  text-align: center;
+  font-size: smaller;
+}
+.mesas .factura .factura-precios .iva {
+  width: 33%;
+  background: #6C757D;
+  text-align: center;
+  font-size: smaller;
+}
+.mesas .factura .factura-precios .total {
+  width: 33%;
+  text-align: center;
+  font-weight: bold;
+  background: #262626;
+  font-size: smaller;
+}
+.mesas .factura .factura-botones {
+  display: flex;
+  justify-content: center;
+}
+.mesas .factura .factura-botones .boton-eliminar {
+  margin: 0.5rem;
+}
+.mesas .factura .factura-botones .boton-eliminar button {
+  width: max-content;
+  padding: 0.7rem 3rem;
+  background: #DC3545;
+  border: none;
+  border-radius: 0.3rem;
+  color: white;
+  font-weight: bold;
+  font-size: 1.2rem;
+  cursor: pointer;
+}
+.mesas .factura .factura-botones .boton-cobrar {
+  margin: 0.5rem;
+}
+.mesas .factura .factura-botones .boton-cobrar button {
+  width: max-content;
+  padding: 0.7rem 3rem;
+  background: #198754;
+  border: none;
+  border-radius: 0.3rem;
+  color: white;
+  font-weight: bold;
+  font-size: 1.2rem;
+  cursor: pointer;
+}
+.mesas .numero-de-mesas {
+  width: 55%;
+  margin: auto;
+}
+.mesas .numero-de-mesas .mesa-titulo {
+  text-align: center;
+}
+.mesas .numero-de-mesas .numero ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(10rem, 1fr));
+  grid-gap: 0.5rem;
+  justify-items: center;
+}
+.mesas .numero-de-mesas .numero ul li {
+  font-size: 2rem;
+  padding: 5rem 6rem;
+  color: #c1cdce;
+  background: #198654;
+  font-weight: 900;
+  cursor: pointer;
+  box-shadow: inset 0 0 1.5rem #000000;
+}
+.mesas .numero-de-mesas .numero ul :first-child {
+  background: #DC3545;
+  color: #bdcacb;
+}
+.mesas .numero-de-mesas .numero ul :nth-child(2) {
+  background: #0D6EFC;
+  color: #bdcacb;
+}
+
+/* ///////////////////
+
+Para categorias
+
+*/
+.categorias {
+  width: 100%;
+  display: flex;
+}
+.categorias .eliminar-ticket {
+  display: none;
+}
+.categorias .eliminar-ticket.activado {
+  display: block;
+  border-radius: 0.3rem;
+  border: #8f9292 solid 1px;
+  height: 100%;
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  background: rgba(0, 0, 0, 0.5);
+  z-index: 1;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  padding-top: 2rem;
+}
+.categorias .eliminar-ticket .ticket {
+  width: 40%;
+  margin: auto;
+  background: white;
+  border-radius: 0.3rem;
+  border: #000000 solid 1px;
+}
+.categorias .eliminar-ticket .ticket .eliminar-ticket-titulo {
+  width: 90%;
+  margin: auto;
+  display: flex;
+  justify-content: space-between;
+}
+.categorias .eliminar-ticket .ticket .eliminar-ticket-descripcion {
+  text-align: center;
+  padding: 1rem;
+  border-top: #c8cbcc solid 1px;
+  border-bottom: #c8cbcc solid 1px;
+  width: 90%;
+}
+.categorias .eliminar-ticket .ticket .eliminar-ticket-botones {
+  text-align: end;
+  padding: 0.7rem;
+}
+.categorias .eliminar-ticket .ticket .eliminar-ticket-botones .ticket-btn-cerrar-e {
+  border: none;
+  border-radius: 0.3rem;
+  font-size: 1.2rem;
+  cursor: pointer;
+}
+.categorias .eliminar-ticket .ticket .eliminar-ticket-botones .ticket-btn-eliminar {
+  background: #198754;
+  border: none;
+  border-radius: 0.3rem;
+  color: white;
+  font-size: 1.2rem;
+  padding: 0.5rem;
+  cursor: pointer;
+}
+.categorias .cobrar-ticket {
+  display: none;
+}
+.categorias .cobrar-ticket.activado {
+  display: block;
+  border-radius: 0.3rem;
+  border: #8f9292 solid 1px;
+  height: 100%;
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  background: rgba(0, 0, 0, 0.5);
+  z-index: 1;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  padding-top: 2rem;
+}
+.categorias .cobrar-ticket .ticket {
+  width: 40%;
+  margin: auto;
+  background: white;
+  border-radius: 0.3rem;
+  border: #000000 solid 1px;
+}
+.categorias .cobrar-ticket .ticket .cobrar-ticket-titulo {
+  width: 90%;
+  margin: auto;
+  display: flex;
+  justify-content: space-between;
+}
+.categorias .cobrar-ticket .ticket .cobrar-ticket-pago {
+  text-align: center;
+  padding: 1rem;
+  border-top: #c8cbcc solid 1px;
+  border-bottom: #c8cbcc solid 1px;
+  width: 30%;
+  margin: auto;
+}
+.categorias .cobrar-ticket .ticket .cobrar-ticket-pago .ticket-btn-seleccionar {
+  width: 100%;
+  border: none;
+  border-radius: 0.3rem;
+  font-size: 1rem;
+  cursor: pointer;
+  background: #0069FD;
+  color: white;
+  padding: 0.5rem 2rem;
+  text-align: center;
+  margin-top: 0.4rem;
+}
+.categorias .cobrar-ticket .ticket .cobrar-ticket-botones {
+  text-align: end;
+  padding: 0.7rem;
+}
+.categorias .cobrar-ticket .ticket .cobrar-ticket-botones .ticket-btn-cerrar-c {
+  border: none;
+  border-radius: 0.3rem;
+  font-size: 1.2rem;
+  cursor: pointer;
+}
+.categorias .factura {
+  width: 35%;
+  margin: auto;
+}
+.categorias .factura .factura-titulo {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.categorias .factura .factura-contenido {
+  display: flex;
+  justify-content: space-between;
+  border: 2px solid rgb(194, 184, 184);
+  border-radius: 0.3rem;
+}
+.categorias .factura .factura-contenido .eliminar {
+  text-align: center;
+  margin-left: 12%;
+  margin-top: 1rem;
+}
+.categorias .factura .factura-contenido .imagen img {
+  width: 3rem;
+  height: 3rem;
+  margin-top: 1.5rem;
+}
+.categorias .factura .factura-contenido .descripcion {
+  text-align: left;
+}
+.categorias .factura .factura-contenido .descripcion h4 {
+  font-size: 1rem;
+  font-style: italic;
+  color: #6C757D;
+}
+.categorias .factura .factura-contenido .precio {
+  margin-right: 1.5rem;
+  margin-top: 1rem;
+}
+.categorias .factura .factura-precios {
+  display: flex;
+  width: 100%;
+  justify-content: space-between;
+  color: white;
+  margin: auto;
+  margin-top: 1rem;
+}
+.categorias .factura .factura-precios .b-imponible {
+  background: #6C757D;
+  width: 33%;
+  text-align: center;
+  font-size: smaller;
+}
+.categorias .factura .factura-precios .iva {
+  width: 33%;
+  background: #6C757D;
+  text-align: center;
+  font-size: smaller;
+}
+.categorias .factura .factura-precios .total {
+  width: 33%;
+  text-align: center;
+  font-weight: bold;
+  background: #262626;
+  font-size: smaller;
+}
+.categorias .factura .factura-botones {
+  display: flex;
+  justify-content: center;
+}
+.categorias .factura .factura-botones .boton-eliminar {
+  margin: 0.5rem;
+}
+.categorias .factura .factura-botones .boton-eliminar button {
+  width: max-content;
+  padding: 0.7rem 3rem;
+  background: #DC3545;
+  border: none;
+  border-radius: 0.3rem;
+  color: white;
+  font-weight: bold;
+  font-size: 1.2rem;
+  cursor: pointer;
+}
+.categorias .factura .factura-botones .boton-cobrar {
+  margin: 0.5rem;
+}
+.categorias .factura .factura-botones .boton-cobrar button {
+  width: max-content;
+  padding: 0.7rem 3rem;
+  background: #198754;
+  border: none;
+  border-radius: 0.3rem;
+  color: white;
+  font-weight: bold;
+  font-size: 1.2rem;
+  cursor: pointer;
+}
+.categorias .seleccion {
+  width: 55%;
+  margin: auto;
+}
+.categorias .seleccion .seleccion-titulo {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+}
+.categorias .seleccion .seleccion-titulo h2 {
+  font-size: 1.5rem;
+  font-weight: lighter;
+}
+.categorias .seleccion .seleccion-pestañas {
+  display: flex;
+}
+.categorias .seleccion .seleccion-pestañas .inicio {
+  margin-right: 0.5rem;
+}
+.categorias .seleccion .seleccion-pestañas .inicio button {
+  display: flex;
+  color: white;
+  padding: 0.7rem 1rem;
+  font-size: 0.8rem;
+  background: #8f9292;
+  border: none;
+  cursor: pointer;
+}
+.categorias .seleccion .seleccion-pestañas .inicio button svg {
+  width: 1.5rem;
+  height: 1rem;
+}
+.categorias .seleccion .seleccion-pestañas .inicio button:hover {
+  background: #6e7576;
+}
+.categorias .seleccion .seleccion-pestañas .categorias button {
+  display: flex;
+  color: white;
+  border: none;
+  cursor: pointer;
+  background: #818b8c;
+  padding: 0.7rem 1rem;
+  font-size: 0.8rem;
+}
+.categorias .seleccion .seleccion-pestañas .categorias button svg {
+  width: 1.5rem;
+  height: 1rem;
+}
+.categorias .seleccion .seleccion-pestañas .categorias button:hover {
+  background: #6e7576;
+}
+.categorias .seleccion .seleccion-producto {
+  width: 100%;
+  display: flex;
+  margin-top: 1rem;
+}
+.categorias .seleccion .seleccion-producto .producto {
+  width: 80%;
+  margin-right: auto;
+}
+.categorias .seleccion .seleccion-producto .producto .imagen img {
+  width: 80%;
+  border: 1px solid rgb(213, 203, 203);
+}
+.categorias .seleccion .seleccion-producto .producto .p-titulo {
+  margin: auto;
+  width: 50%;
+}
+
+/* //////////////////
+
+Para productos
+
+*/
+.productos {
+  width: 100%;
+  display: flex;
+}
+.productos .eliminar-ticket {
+  display: none;
+}
+.productos .eliminar-ticket.activado {
+  display: block;
+  border-radius: 0.3rem;
+  border: #8f9292 solid 1px;
+  height: 100%;
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  background: rgba(0, 0, 0, 0.5);
+  z-index: 1;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  padding-top: 2rem;
+}
+.productos .eliminar-ticket .ticket {
+  width: 40%;
+  margin: auto;
+  background: white;
+  border-radius: 0.3rem;
+  border: #000000 solid 1px;
+}
+.productos .eliminar-ticket .ticket .eliminar-ticket-titulo {
+  width: 90%;
+  margin: auto;
+  display: flex;
+  justify-content: space-between;
+}
+.productos .eliminar-ticket .ticket .eliminar-ticket-descripcion {
+  text-align: center;
+  padding: 1rem;
+  border-top: #c8cbcc solid 1px;
+  border-bottom: #c8cbcc solid 1px;
+  width: 90%;
+}
+.productos .eliminar-ticket .ticket .eliminar-ticket-botones {
+  text-align: end;
+  padding: 0.7rem;
+}
+.productos .eliminar-ticket .ticket .eliminar-ticket-botones .ticket-btn-cerrar-e {
+  border: none;
+  border-radius: 0.3rem;
+  font-size: 1.2rem;
+  cursor: pointer;
+}
+.productos .eliminar-ticket .ticket .eliminar-ticket-botones .ticket-btn-eliminar {
+  background: #198754;
+  border: none;
+  border-radius: 0.3rem;
+  color: white;
+  font-size: 1.2rem;
+  padding: 0.5rem;
+  cursor: pointer;
+}
+.productos .cobrar-ticket {
+  display: none;
+}
+.productos .cobrar-ticket.activado {
+  display: block;
+  border-radius: 0.3rem;
+  border: #8f9292 solid 1px;
+  height: 100%;
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  background: rgba(0, 0, 0, 0.5);
+  z-index: 1;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  padding-top: 2rem;
+}
+.productos .cobrar-ticket .ticket {
+  width: 40%;
+  margin: auto;
+  background: white;
+  border-radius: 0.3rem;
+  border: #000000 solid 1px;
+}
+.productos .cobrar-ticket .ticket .cobrar-ticket-titulo {
+  width: 90%;
+  margin: auto;
+  display: flex;
+  justify-content: space-between;
+}
+.productos .cobrar-ticket .ticket .cobrar-ticket-pago {
+  text-align: center;
+  padding: 1rem;
+  border-top: #c8cbcc solid 1px;
+  border-bottom: #c8cbcc solid 1px;
+  width: 30%;
+  margin: auto;
+}
+.productos .cobrar-ticket .ticket .cobrar-ticket-pago .ticket-btn-seleccionar {
+  width: 100%;
+  border: none;
+  border-radius: 0.3rem;
+  font-size: 1rem;
+  cursor: pointer;
+  background: #0069FD;
+  color: white;
+  padding: 0.5rem 2rem;
+  text-align: center;
+  margin-top: 0.4rem;
+}
+.productos .cobrar-ticket .ticket .cobrar-ticket-botones {
+  text-align: end;
+  padding: 0.7rem;
+}
+.productos .cobrar-ticket .ticket .cobrar-ticket-botones .ticket-btn-cerrar-c {
+  border: none;
+  border-radius: 0.3rem;
+  font-size: 1.2rem;
+  cursor: pointer;
+}
+.productos .factura {
+  width: 35%;
+  margin-left: auto;
+}
+.productos .factura .factura-titulo {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.productos .factura .factura-contenido {
+  display: flex;
+  justify-content: space-between;
+  border: 2px solid rgb(194, 184, 184);
+  border-radius: 0.3rem;
+}
+.productos .factura .factura-contenido .eliminar {
+  text-align: center;
+  margin-left: 12%;
+  margin-top: 1rem;
+}
+.productos .factura .factura-contenido .imagen img {
+  width: 3rem;
+  height: 3rem;
+  margin-top: 1.5rem;
+}
+.productos .factura .factura-contenido .descripcion {
+  text-align: left;
+}
+.productos .factura .factura-contenido .descripcion h4 {
+  font-size: 1rem;
+  font-style: italic;
+  color: #6C757D;
+}
+.productos .factura .factura-contenido .precio {
+  margin-right: 1.5rem;
+  margin-top: 1rem;
+}
+.productos .factura .factura-precios {
+  display: flex;
+  width: 100%;
+  justify-content: space-between;
+  color: white;
+  margin: auto;
+  margin-top: 1rem;
+}
+.productos .factura .factura-precios .b-imponible {
+  background: #6C757D;
+  width: 33%;
+  text-align: center;
+  font-size: smaller;
+}
+.productos .factura .factura-precios .iva {
+  width: 33%;
+  background: #6C757D;
+  text-align: center;
+  font-size: smaller;
+}
+.productos .factura .factura-precios .total {
+  width: 33%;
+  text-align: center;
+  font-weight: bold;
+  background: #262626;
+  font-size: smaller;
+}
+.productos .factura .factura-botones {
+  display: flex;
+  justify-content: center;
+}
+.productos .factura .factura-botones .boton-eliminar {
+  margin: 0.5rem;
+}
+.productos .factura .factura-botones .boton-eliminar button {
+  width: max-content;
+  padding: 0.7rem 3rem;
+  background: #DC3545;
+  border: none;
+  border-radius: 0.3rem;
+  color: white;
+  font-weight: bold;
+  font-size: 1.2rem;
+  cursor: pointer;
+}
+.productos .factura .factura-botones .boton-cobrar {
+  margin: 0.5rem;
+}
+.productos .factura .factura-botones .boton-cobrar button {
+  width: max-content;
+  padding: 0.7rem 3rem;
+  background: #198754;
+  border: none;
+  border-radius: 0.3rem;
+  color: white;
+  font-weight: bold;
+  font-size: 1.2rem;
+  cursor: pointer;
+}
+.productos .seleccion {
+  width: 55%;
+  margin: auto;
+}
+.productos .seleccion .seleccion-titulo {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+}
+.productos .seleccion .seleccion-titulo h2 {
+  font-size: 1.5rem;
+  font-weight: lighter;
+}
+.productos .seleccion .seleccion-pestañas {
+  display: flex;
+}
+.productos .seleccion .seleccion-pestañas .inicio {
+  margin-right: 0.5rem;
+}
+.productos .seleccion .seleccion-pestañas .inicio button {
+  display: flex;
+  color: white;
+  padding: 0.7rem 1rem;
+  font-size: 0.8rem;
+  background: #8f9292;
+  border: none;
+  cursor: pointer;
+}
+.productos .seleccion .seleccion-pestañas .inicio button svg {
+  width: 1.5rem;
+  height: 1rem;
+}
+.productos .seleccion .seleccion-pestañas .inicio button:hover {
+  background: #6e7576;
+}
+.productos .seleccion .seleccion-pestañas .categorias button {
+  display: flex;
+  color: white;
+  border: none;
+  cursor: pointer;
+  background: #818b8c;
+  padding: 0.7rem 1rem;
+  font-size: 0.8rem;
+}
+.productos .seleccion .seleccion-pestañas .categorias button svg {
+  width: 1.5rem;
+  height: 1rem;
+}
+.productos .seleccion .seleccion-pestañas .categorias button:hover {
+  background: #6e7576;
+}
+.productos .seleccion .seleccion-pestañas .tapas {
+  width: 320%;
+  margin-left: auto;
+}
+.productos .seleccion .seleccion-pestañas .tapas button {
+  display: flex;
+  color: white;
+  border: none;
+  cursor: pointer;
+  background: #818b8c;
+  padding: 0.7rem 1rem;
+  font-size: 0.8rem;
+}
+.productos .seleccion .seleccion-pestañas .tapas button svg {
+  width: 1.5rem;
+  height: 1rem;
+}
+.productos .seleccion .seleccion-pestañas .tapas button:hover {
+  background: #6e7576;
+}
+.productos .seleccion .seleccion-producto {
+  width: 100%;
+  display: flex;
+  margin-top: 1rem;
+}
+.productos .seleccion .seleccion-producto .producto {
+  width: 80%;
+  margin-right: auto;
+}
+.productos .seleccion .seleccion-producto .producto .imagen img {
+  width: 80%;
+  border: 1px solid rgb(213, 203, 203);
+}
+.productos .seleccion .seleccion-producto .producto .p-titulo {
+  margin: auto;
+  width: 50%;
+}
+
+/* //////////////////
+
+Para ventas
+
+*/
+.ventas {
+  width: 100%;
+  display: flex;
+}
+.ventas .factura {
+  width: 35%;
+  margin-left: auto;
+}
+.ventas .factura .factura-titulo {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.ventas .factura .fecha {
+  display: flex;
+  justify-content: space-between;
+  padding: 1rem;
+}
+.ventas .factura .fecha div input {
+  padding-left: 1.2rem;
+}
+.ventas .factura .mesa {
+  display: flex;
+  justify-content: space-between;
+  padding: 1rem;
+}
+.ventas .factura .filtro button {
+  width: 92.5%;
+  background: #0D6EFC;
+  border: none;
+  border-radius: 0.3rem;
+  color: white;
+  padding: 0.7rem 1rem;
+  font-size: 0.8rem;
+  cursor: pointer;
+  margin-left: 1rem;
+  margin-top: 1rem;
+}
+.ventas .factura .descripciones {
+  border: 1px solid rgb(213, 203, 203);
+  border-radius: 0.3rem;
+  margin-top: 1rem;
+  overflow-y: scroll;
+}
+.ventas .factura .descripciones .descripcion-seleccionada {
+  display: flex;
+  justify-content: space-between;
+  padding: 0.4rem;
+  background: #0D6EFC;
+  color: white;
+}
+.ventas .factura .descripciones .descripcion {
+  display: flex;
+  justify-content: space-between;
+  padding: 0.4rem;
+}
+.ventas .factura .ingresos {
+  display: flex;
+  background: #869092;
+  margin-top: 1rem;
+  font-size: 1rem;
+  color: white;
+  font-weight: bold;
+}
+.ventas .factura .ingresos .total {
+  width: 50%;
+  text-align: center;
+  font-weight: bold;
+  font-size: smaller;
+}
+.ventas .factura .ingresos .linea {
+  border: white 1px solid;
+  height: 30%;
+}
+.ventas .factura .ingresos .media {
+  width: 50%;
+  text-align: center;
+  font-weight: bold;
+  font-size: smaller;
+}
+.ventas .numero-venta {
+  width: 55%;
+  margin: auto;
+}
+.ventas .numero-venta .venta-titulo h2 {
+  text-align: center;
+}
+.ventas .numero-venta .datos-venta {
+  margin: auto;
+  border: 1px solid rgb(213, 202, 202);
+  border-radius: 0.3rem;
+}
+.ventas .numero-venta .datos-venta .excel {
+  border: 1px solid rgb(208, 198, 198);
+}
+.ventas .numero-venta .datos-venta .excel button {
+  border: none;
+  width: 100%;
+  text-align: end;
+  padding: 0.5rem;
+}
+.ventas .numero-venta .datos-venta .excel button svg {
+  width: 2rem;
+  height: 2rem;
+}
+.ventas .numero-venta .datos-venta .datos {
+  padding: 1rem;
+}
+.ventas .numero-venta .datos-venta .datos p {
+  font-size: 1rem;
+  font-weight: bold;
+}
+.ventas .numero-venta .venta {
+  margin-top: 1rem;
+}
+.ventas .numero-venta .venta table tr th {
+  font-size: 1rem;
+  font-weight: bold;
+  border-bottom: 0.3rem solid rgb(22, 21, 21);
+}
+.ventas .numero-venta .venta table tr td {
+  font-size: 0.8rem;
+  padding: 0.5rem;
+  width: 25%;
+  text-align: center;
+}
+.ventas .numero-venta .venta table tr td img {
+  width: 50%;
+}
+
+/* //////////////////
+
+Panel de Administracion de IVA
+
+*/
+.IVA {
+  width: 80%;
+  margin: auto;
+}
+.IVA .titulo {
+  height: 13%;
+}
+.IVA .titulo h2 {
+  padding-top: 1rem;
+  font-size: medium;
+}
+.IVA .titulo h1 {
+  padding-bottom: 1rem;
+}
+.IVA .hamburguesa {
+  position: absolute;
+  top: 3rem;
+  left: 2.5rem;
+}
+.IVA .hamburguesa button {
+  padding: 0.4rem 0.4rem;
+  background: #d7d2d2;
+  border: #8f9292 solid 1px;
+  border-radius: 0.2rem;
+  cursor: pointer;
+}
+.IVA .hamburguesa button svg {
+  width: 1.5rem;
+  height: 1rem;
+}
+.IVA .hamburguesa button:hover {
+  background: #8f9292;
+}
+.IVA .añadir-iva {
+  text-align: end;
+  width: 100%;
+  margin-top: 4rem;
+}
+.IVA .añadir-iva .añadir-iva-btn {
+  color: white;
+  background: #0069FD;
+  border: none;
+  border-radius: 0.3rem;
+  padding: 0.7rem 1rem;
+  font-size: 1rem;
+  cursor: pointer;
+  margin-top: 1rem;
+}
+.IVA .añadir-iva .añadir-iva-btn:hover {
+  background: #0059E3;
+}
+.IVA .añadir-mesa {
+  display: none;
+}
+.IVA .añadir-mesa.activado {
+  display: block;
+  border-radius: 0.3rem;
+  border: #8f9292 solid 1px;
+  height: 100%;
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  background: rgba(0, 0, 0, 0.5);
+  z-index: 1;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  padding-top: 2rem;
+}
+.IVA .añadir-mesa .mesa {
+  width: 40%;
+  margin: auto;
+  background: white;
+  border-radius: 0.3rem;
+  border: #cbd2d2 solid 1px;
+}
+.IVA .añadir-mesa .mesa .añadir-mesa-titulo {
+  width: 90%;
+  margin: auto;
+  display: flex;
+  justify-content: space-between;
+}
+.IVA .añadir-mesa .mesa .añadir-mesa-descripcion {
+  padding: 1rem;
+  border-top: #cbd2d2 solid 1px;
+  border-bottom: #cbd2d2 solid 1px;
+  width: 90%;
+  margin: auto;
+}
+.IVA .añadir-mesa .mesa .añadir-mesa-descripcion .añadir-mesa-tipo div {
+  padding: 0.5rem;
+}
+.IVA .añadir-mesa .mesa .añadir-mesa-descripcion .añadir-mesa-tipo div input {
+  width: 100%;
+  padding: 0.4rem;
+  border: #cbd2d2 solid 1px;
+  border-radius: 0.3rem;
+}
+.IVA .añadir-mesa .mesa .añadir-mesa-descripcion .añadir-mesa-vigente div {
+  padding: 0.5rem;
+}
+.IVA .añadir-mesa .mesa .añadir-mesa-descripcion .añadir-mesa-vigente div select {
+  width: 100%;
+  padding: 0.4rem;
+  border: #cbd2d2 solid 1px;
+  border-radius: 0.3rem;
+}
+.IVA .añadir-mesa .mesa .añadir-mesa-botones {
+  text-align: end;
+  padding: 0.7rem;
+}
+.IVA .añadir-mesa .mesa .añadir-mesa-botones .añadir-mesa-cerrar {
+  border: none;
+  border-radius: 0.3rem;
+  font-size: 1.2rem;
+  cursor: pointer;
+  color: white;
+  background: #6C757D;
+  padding: 0.5rem;
+}
+.IVA .añadir-mesa .mesa .añadir-mesa-botones .añadir-mesa-cerrar:hover {
+  background: #5C6D77;
+}
+.IVA .añadir-mesa .mesa .añadir-mesa-botones .añadir-mesa-confirmar {
+  background: #0069FD;
+  border: none;
+  border-radius: 0.3rem;
+  color: white;
+  font-size: 1.2rem;
+  padding: 0.5rem;
+  cursor: pointer;
+}
+.IVA .añadir-mesa .mesa .añadir-mesa-botones .añadir-mesa-confirmar:hover {
+  background: #0060E9;
+}
+.IVA .eliminar-iva {
+  display: none;
+}
+.IVA .eliminar-iva.activado {
+  display: block;
+  border-radius: 0.3rem;
+  border: #8f9292 solid 1px;
+  height: 100%;
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  background: rgba(0, 0, 0, 0.5);
+  z-index: 1;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  padding-top: 2rem;
+}
+.IVA .eliminar-iva .mesa {
+  width: 40%;
+  margin: auto;
+  background: white;
+  border-radius: 0.3rem;
+  border: #cbd2d2 solid 1px;
+}
+.IVA .eliminar-iva .mesa .eliminar-iva-titulo {
+  width: 90%;
+  margin: auto;
+  display: flex;
+  justify-content: space-between;
+}
+.IVA .eliminar-iva .mesa .eliminar-iva-descripcion {
+  padding: 1rem;
+  border-top: #cbd2d2 solid 1px;
+  border-bottom: #cbd2d2 solid 1px;
+  width: 90%;
+  margin: auto;
+}
+.IVA .eliminar-iva .mesa .eliminar-iva-descripcion .añadir-mesa-tipo div {
+  padding: 0.5rem;
+}
+.IVA .eliminar-iva .mesa .eliminar-iva-descripcion .añadir-mesa-tipo div input {
+  width: 100%;
+  padding: 0.4rem;
+  border: #cbd2d2 solid 1px;
+  border-radius: 0.3rem;
+}
+.IVA .eliminar-iva .mesa .eliminar-iva-descripcion .añadir-mesa-vigente div {
+  padding: 0.5rem;
+}
+.IVA .eliminar-iva .mesa .eliminar-iva-descripcion .añadir-mesa-vigente div select {
+  width: 100%;
+  padding: 0.4rem;
+  border: #cbd2d2 solid 1px;
+  border-radius: 0.3rem;
+}
+.IVA .eliminar-iva .mesa .eliminar-iva-botones {
+  text-align: end;
+  padding: 0.7rem;
+}
+.IVA .eliminar-iva .mesa .eliminar-iva-botones .eliminar-iva-btn-cerrar {
+  border: none;
+  border-radius: 0.3rem;
+  font-size: 1.2rem;
+  cursor: pointer;
+  color: white;
+  background: #6C757D;
+  padding: 0.5rem;
+}
+.IVA .eliminar-iva .mesa .eliminar-iva-botones .eliminar-iva-btn-cerrar:hover {
+  background: #5C6D77;
+}
+.IVA .eliminar-iva .mesa .eliminar-iva-botones .eliminar-iva-btn-eliminar {
+  background: #DC3545;
+  border: none;
+  border-radius: 0.3rem;
+  color: white;
+  font-size: 1.2rem;
+  padding: 0.5rem;
+  cursor: pointer;
+}
+.IVA .eliminar-iva .mesa .eliminar-iva-botones .eliminar-iva-btn-eliminar:hover {
+  background: #D12E44;
+}
+.IVA .tabla {
+  margin-top: 1rem;
+}
+.IVA .tabla table {
+  width: 100%;
+}
+.IVA .tabla table .tabla-titulos {
+  background: #C9E7FF;
+}
+.IVA .tabla table .tabla-titulos th {
+  padding: 0.5rem;
+  border-bottom: 2px solid rgb(17, 12, 12);
+}
+.IVA .tabla table .tabla-informacion td {
+  text-align: center;
+  padding: 0.8rem;
+  border: 1px solid rgb(227, 222, 222);
+}
+.IVA .tabla table .tabla-informacion td .tabla-btn-editar {
+  color: white;
+  background: #198754;
+  border: none;
+  border-radius: 0.3rem;
+  cursor: pointer;
+  padding: 0.4rem 0.4rem;
+}
+.IVA .tabla table .tabla-informacion td .tabla-btn-editar svg {
+  width: 1.5rem;
+  height: 1.5rem;
+}
+.IVA .tabla table .tabla-informacion td .tabla-btn-editar:hover {
+  background: #1d5f41;
+}
+.IVA .tabla table .tabla-informacion td .tabla-btn-eliminar {
+  background: #DC3545;
+  border: none;
+  border-radius: 0.3rem;
+  cursor: pointer;
+  padding: 0.4rem 0.4rem;
+}
+.IVA .tabla table .tabla-informacion td .tabla-btn-eliminar svg {
+  width: 1.5rem;
+  height: 1.5rem;
+  color: white;
+}
+.IVA .tabla table .tabla-informacion td .tabla-btn-eliminar:hover {
+  background: #C92222;
+}
+.IVA .tabla .buscador-btn {
+  margin-top: 2rem;
+  text-align: center;
+}
+.IVA .tabla .buscador-btn button {
+  background: white;
+  border: none;
+  border-radius: 0.3rem;
+  cursor: pointer;
+  color: #0069FD;
+  padding: 0.4rem 0.5rem;
+  font-size: 1rem;
+  margin-left: 0.5rem;
+  margin-top: 0.5rem;
+}
+.IVA .tabla .buscador-btn button:hover {
+  background: #0069FD;
+  color: white;
+}
+
+/* //////////////////
+
+Para todo el resto de la pagina
+
+*/
+.titulo {
+  width: 100%;
+  background: rgba(171, 173, 173, 0.4156862745);
+  text-align: center;
+  font-weight: lighter;
+}
+
+h1, h2, h3, h4, h5, h6, p, span, a, ul, li, label, input, button, div {
+  font-family: "Abel", sans-serif;
+  font-weight: lighter;
+}
+
+img {
+  width: 100%;
+}
+
+/*# sourceMappingURL=style.css.map */

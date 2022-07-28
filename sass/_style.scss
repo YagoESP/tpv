@@ -1,0 +1,1544 @@
+/* //////////////////
+
+Para mesas
+
+*///////////////////
+.mesas{
+    width: 100%;
+    display: flex;
+
+    .eliminar-ticket{
+        display: none;
+        
+
+        &.activado{
+            display: block;
+            border-radius: 0.3rem;
+            border: #8f9292 solid 1px;
+            height: 100%;
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            background: rgba(0,0,0,0.5);
+            z-index: 1;
+            justify-content: center;
+            align-items: center;
+            flex-direction: column;
+            padding-top: 2rem;
+        }
+    
+        .ticket{
+            width: 40%;
+            margin: auto;
+            background: white;
+            border-radius: 0.3rem;
+            border: #000000 solid 1px;
+            .eliminar-ticket-titulo{
+                width: 90%;
+                margin: auto;
+                display: flex;
+                justify-content: space-between;
+                
+            }
+            .eliminar-ticket-descripcion{
+                text-align: center;
+                padding: 1rem;
+                border-top: #c8cbcc solid 1px;
+                border-bottom: #c8cbcc solid 1px;
+                width: 90%;
+            }
+    
+            .eliminar-ticket-botones{
+                text-align: end;
+                padding: 0.7rem;
+    
+                .ticket-btn-cerrar-e{
+                    border: none;
+                    border-radius: 0.3rem;
+                    font-size: 1.2rem;
+                    cursor: pointer;
+                }
+    
+                .ticket-btn-eliminar{
+                    background: #198754;
+                    border: none;
+                    border-radius: 0.3rem;
+                    color: white;
+                    font-size: 1.2rem;
+                    padding: 0.5rem;
+                    cursor: pointer;
+                }
+            }
+        }
+    }
+
+    .cobrar-ticket{
+        display: none;
+        
+
+        &.activado{
+            display: block;
+            border-radius: 0.3rem;
+            border: #8f9292 solid 1px;
+            height: 100%;
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            background: rgba(0,0,0,0.5);
+            z-index: 1;
+            justify-content: center;
+            align-items: center;
+            flex-direction: column;
+            padding-top: 2rem;
+        }
+    
+        .ticket{
+            width: 40%;
+            margin: auto;
+            background: white;
+            border-radius: 0.3rem;
+            border: #000000 solid 1px;
+            .cobrar-ticket-titulo{
+                width: 90%;
+                margin: auto;
+                display: flex;
+                justify-content: space-between;
+                
+            }
+            .cobrar-ticket-pago{
+                text-align: center;
+                padding: 1rem;
+                border-top: #c8cbcc solid 1px;
+                border-bottom: #c8cbcc solid 1px;
+                width: 30%;
+                margin: auto;
+                
+
+                .ticket-btn-seleccionar{
+                    width: 100%;
+                    border: none;
+                    border-radius: 0.3rem;
+                    font-size: 1rem;
+                    cursor: pointer;
+                    background: #0069FD;
+                    color: white;
+                    padding: 0.5rem 2rem;
+                    text-align: center;
+                    margin-top: 0.4rem;
+                }
+            }
+    
+            .cobrar-ticket-botones{
+                text-align: end;
+                padding: 0.7rem;
+    
+                .ticket-btn-cerrar-c{
+                    border: none;
+                    border-radius: 0.3rem;
+                    font-size: 1.2rem;
+                    cursor: pointer;
+                }
+            }
+        }
+    }
+ 
+    .factura{
+        width: 35%;
+        margin-left:auto;
+
+        .factura-titulo{
+            width: 100%;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+             
+        }
+
+        .factura-contenido{
+            border: 2px solid rgb(194, 184, 184);
+            border-radius: 0.3rem;
+            text-align: center;    
+        }
+ 
+        .factura-precios{
+            display: flex;
+            width: 100%;
+            justify-content: space-between;
+            color: white;
+            margin: auto;
+            margin-top: 1rem;
+ 
+            .b-imponible{
+                background: #6C757D;
+                width: 33%;
+                text-align: center;
+                font-size: smaller;
+            }
+ 
+            .iva{
+                width: 33%;
+                background: #6C757D;
+                text-align: center;
+                font-size: smaller;
+            }
+ 
+            .total{
+                width: 33%;
+                text-align: center;
+                font-weight: bold;
+                background: #262626;
+                font-size: smaller;
+            }
+        }
+ 
+        .factura-botones{
+            display: flex;
+            justify-content: center;
+             
+            .boton-eliminar{     
+                margin: 0.5rem;
+
+                button{
+                    width: max-content;
+                    padding: 0.7rem 3rem;
+                    background: #DC3545;
+                    border: none;
+                    border-radius: 0.3rem;
+                    color: white;
+                    font-weight: bold;
+                    font-size: 1.2rem;
+                    cursor: pointer;
+                }
+            }
+ 
+            .boton-cobrar{
+                margin: 0.5rem;
+ 
+                button{
+                    width: max-content;
+                    padding: 0.7rem 3rem;
+                    background: #198754;
+                    border: none;
+                    border-radius: 0.3rem;
+                    color: white;
+                    font-weight: bold;
+                    font-size: 1.2rem;
+                    cursor: pointer;
+                }
+            }
+        }
+    }
+ 
+    .numero-de-mesas{
+        width: 55%;
+        margin: auto;        
+
+        .mesa-titulo{
+            text-align: center;
+        }
+
+        .numero{
+            ul{
+                list-style: none;
+                padding: 0;
+                margin: 0;
+                display: grid;
+                grid-template-columns: repeat(auto-fit, minmax(10rem, 1fr));
+                grid-gap: 0.5rem;
+                justify-items: center;
+
+                li{
+                    font-size: 2rem;
+                    padding: 5rem 6rem;
+                    color: #c1cdce;
+                    background: #198654;
+                    font-weight: 900;
+                    cursor: pointer;
+                    box-shadow: inset 0 0 1.5rem #000000;
+                }
+
+                :first-child{
+                    background: #DC3545;
+                    color: #bdcacb;
+                }
+
+                :nth-child(2){
+                    background: #0D6EFC;
+                    color: #bdcacb;
+                }
+            }
+        }
+    }
+}
+/* ///////////////////
+
+Para categorias
+
+*////////////////////
+.categorias{
+    width: 100%;
+    display: flex;
+
+    .eliminar-ticket{
+        display: none;
+        
+
+        &.activado{
+            display: block;
+            border-radius: 0.3rem;
+            border: #8f9292 solid 1px;
+            height: 100%;
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            background: rgba(0,0,0,0.5);
+            z-index: 1;
+            justify-content: center;
+            align-items: center;
+            flex-direction: column;
+            padding-top: 2rem;
+        }
+    
+        .ticket{
+            width: 40%;
+            margin: auto;
+            background: white;
+            border-radius: 0.3rem;
+            border: #000000 solid 1px;
+            .eliminar-ticket-titulo{
+                width: 90%;
+                margin: auto;
+                display: flex;
+                justify-content: space-between;
+                
+            }
+            .eliminar-ticket-descripcion{
+                text-align: center;
+                padding: 1rem;
+                border-top: #c8cbcc solid 1px;
+                border-bottom: #c8cbcc solid 1px;
+                width: 90%;
+            }
+    
+            .eliminar-ticket-botones{
+                text-align: end;
+                padding: 0.7rem;
+    
+                .ticket-btn-cerrar-e{
+                    border: none;
+                    border-radius: 0.3rem;
+                    font-size: 1.2rem;
+                    cursor: pointer;
+                }
+    
+                .ticket-btn-eliminar{
+                    background: #198754;
+                    border: none;
+                    border-radius: 0.3rem;
+                    color: white;
+                    font-size: 1.2rem;
+                    padding: 0.5rem;
+                    cursor: pointer;
+                }
+            }
+        }
+    }
+
+    .cobrar-ticket{
+        display: none;
+        
+
+        &.activado{
+            display: block;
+            border-radius: 0.3rem;
+            border: #8f9292 solid 1px;
+            height: 100%;
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            background: rgba(0,0,0,0.5);
+            z-index: 1;
+            justify-content: center;
+            align-items: center;
+            flex-direction: column;
+            padding-top: 2rem;
+        }
+    
+        .ticket{
+            width: 40%;
+            margin: auto;
+            background: white;
+            border-radius: 0.3rem;
+            border: #000000 solid 1px;
+            .cobrar-ticket-titulo{
+                width: 90%;
+                margin: auto;
+                display: flex;
+                justify-content: space-between;
+                
+            }
+            .cobrar-ticket-pago{
+                text-align: center;
+                padding: 1rem;
+                border-top: #c8cbcc solid 1px;
+                border-bottom: #c8cbcc solid 1px;
+                width: 30%;
+                margin: auto;
+                
+
+                .ticket-btn-seleccionar{
+                    width: 100%;
+                    border: none;
+                    border-radius: 0.3rem;
+                    font-size: 1rem;
+                    cursor: pointer;
+                    background: #0069FD;
+                    color: white;
+                    padding: 0.5rem 2rem;
+                    text-align: center;
+                    margin-top: 0.4rem;
+                }
+            }
+    
+            .cobrar-ticket-botones{
+                text-align: end;
+                padding: 0.7rem;
+    
+                .ticket-btn-cerrar-c{
+                    border: none;
+                    border-radius: 0.3rem;
+                    font-size: 1.2rem;
+                    cursor: pointer;
+                }
+            }
+        }
+    }
+
+    .factura{
+        width: 35%;
+        margin: auto;
+
+        .factura-titulo{
+            width: 100%;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            
+        }
+
+        .factura-contenido{
+            display: flex;
+            justify-content: space-between;
+            border: 2px solid rgb(194, 184, 184);
+            border-radius: 0.3rem;
+            
+            .eliminar{
+                text-align: center;
+                margin-left: 12%;
+                margin-top: 1rem;
+            }
+            
+            .imagen{
+                img{
+                    width: 3rem;
+                    height: 3rem;
+                    margin-top: 1.5rem;
+                }
+            }
+
+            .descripcion{
+                text-align: left;
+                h4{
+                    font-size: 1rem;
+                    font-style: italic;
+                    color: #6C757D;
+                }
+            }
+
+            .precio{
+                margin-right: 1.5rem;
+                margin-top: 1rem;
+                
+            }
+        }
+
+        .factura-precios{
+            display: flex;
+            width: 100%;
+            justify-content: space-between;
+            color: white;
+            margin: auto;
+            margin-top: 1rem;
+
+
+            .b-imponible{
+                background: #6C757D;
+                width: 33%;
+                text-align: center;
+                font-size: smaller;
+            }
+
+            .iva{
+                width: 33%;
+                background: #6C757D;
+                text-align: center;
+                font-size: smaller;
+            }
+
+            .total{
+                width: 33%;
+                text-align: center;
+                font-weight: bold;
+                background: #262626;
+                font-size: smaller;
+            }
+        }
+
+        .factura-botones{
+            display: flex;
+            justify-content: center;
+            
+            .boton-eliminar{
+                margin: 0.5rem;
+
+                button{
+                    width: max-content;
+                    padding: 0.7rem 3rem;
+                    background: #DC3545;
+                    border: none;
+                    border-radius: 0.3rem;
+                    color: white;
+                    font-weight: bold;
+                    font-size: 1.2rem;
+                    cursor: pointer;
+                }
+            }
+
+            .boton-cobrar{
+                margin: 0.5rem;
+
+                button{
+                    width: max-content;
+                    padding: 0.7rem 3rem;
+                    background: #198754;
+                    border: none;
+                    border-radius: 0.3rem;
+                    color: white;
+                    font-weight: bold;
+                    font-size: 1.2rem;
+                    cursor: pointer;
+                }
+            }
+        }
+    }
+
+    .seleccion{
+        width: 55%;
+        margin: auto;
+
+        .seleccion-titulo{
+            width: 100%;
+            display: flex;
+            justify-content: center;
+
+            h2{
+                font-size: 1.5rem;
+                font-weight: lighter;
+                
+            }
+        }
+
+        .seleccion-pestañas{
+            display: flex;
+
+            .inicio{
+                margin-right: 0.5rem;
+
+                button{
+                    display: flex;
+                    color: white;
+                    padding: 0.7rem 1rem;
+                    font-size: 0.8rem;
+                    background: #8f9292;
+                    border: none; 
+                    cursor: pointer;
+                
+                    svg{
+                        width: 1.5rem;
+                        height: 1rem;
+                    }
+
+                    &:hover{
+                        background: #6e7576;
+                    }
+                }
+                
+            }
+
+            .categorias{
+                button{
+                    display: flex;
+                    color: white;
+                    border: none;
+                    cursor: pointer;
+                    background: #818b8c;
+                    padding: 0.7rem 1rem;
+                    font-size: 0.8rem;
+
+                    svg{
+                        width: 1.5rem;
+                        height: 1rem;
+                    }
+
+                    &:hover{
+                        background: #6e7576;
+                    }
+                }
+            }
+        }
+
+        .seleccion-producto{
+            width: 100%;
+            display: flex;
+            margin-top: 1rem;
+
+            .producto{
+                width: 80%;
+                margin-right: auto;
+              
+                .imagen{
+                    img{
+                        width: 80%;
+                        border: 1px solid rgb(213, 203, 203);
+                    }
+                }
+
+                .p-titulo{
+                    margin: auto;
+                    width: 50%;
+                }
+            }
+        }
+    }
+}
+/* //////////////////
+
+Para productos
+
+*///////////////////
+.productos{
+    width: 100%;
+    display: flex;
+
+    .eliminar-ticket{
+        display: none;
+        
+
+        &.activado{
+            display: block;
+            border-radius: 0.3rem;
+            border: #8f9292 solid 1px;
+            height: 100%;
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            background: rgba(0,0,0,0.5);
+            z-index: 1;
+            justify-content: center;
+            align-items: center;
+            flex-direction: column;
+            padding-top: 2rem;
+        }
+    
+        .ticket{
+            width: 40%;
+            margin: auto;
+            background: white;
+            border-radius: 0.3rem;
+            border: #000000 solid 1px;
+            .eliminar-ticket-titulo{
+                width: 90%;
+                margin: auto;
+                display: flex;
+                justify-content: space-between;
+                
+            }
+            .eliminar-ticket-descripcion{
+                text-align: center;
+                padding: 1rem;
+                border-top: #c8cbcc solid 1px;
+                border-bottom: #c8cbcc solid 1px;
+                width: 90%;
+            }
+    
+            .eliminar-ticket-botones{
+                text-align: end;
+                padding: 0.7rem;
+    
+                .ticket-btn-cerrar-e{
+                    border: none;
+                    border-radius: 0.3rem;
+                    font-size: 1.2rem;
+                    cursor: pointer;
+                }
+    
+                .ticket-btn-eliminar{
+                    background: #198754;
+                    border: none;
+                    border-radius: 0.3rem;
+                    color: white;
+                    font-size: 1.2rem;
+                    padding: 0.5rem;
+                    cursor: pointer;
+                }
+            }
+        }
+    }
+
+    .cobrar-ticket{
+        display: none;
+        
+
+        &.activado{
+            display: block;
+            border-radius: 0.3rem;
+            border: #8f9292 solid 1px;
+            height: 100%;
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            background: rgba(0,0,0,0.5);
+            z-index: 1;
+            justify-content: center;
+            align-items: center;
+            flex-direction: column;
+            padding-top: 2rem;
+        }
+    
+        .ticket{
+            width: 40%;
+            margin: auto;
+            background: white;
+            border-radius: 0.3rem;
+            border: #000000 solid 1px;
+            .cobrar-ticket-titulo{
+                width: 90%;
+                margin: auto;
+                display: flex;
+                justify-content: space-between;
+                
+            }
+            .cobrar-ticket-pago{
+                text-align: center;
+                padding: 1rem;
+                border-top: #c8cbcc solid 1px;
+                border-bottom: #c8cbcc solid 1px;
+                width: 30%;
+                margin: auto;
+                
+
+                .ticket-btn-seleccionar{
+                    width: 100%;
+                    border: none;
+                    border-radius: 0.3rem;
+                    font-size: 1rem;
+                    cursor: pointer;
+                    background: #0069FD;
+                    color: white;
+                    padding: 0.5rem 2rem;
+                    text-align: center;
+                    margin-top: 0.4rem;
+                }
+            }
+    
+            .cobrar-ticket-botones{
+                text-align: end;
+                padding: 0.7rem;
+    
+                .ticket-btn-cerrar-c{
+                    border: none;
+                    border-radius: 0.3rem;
+                    font-size: 1.2rem;
+                    cursor: pointer;
+                }
+            }
+        }
+    }
+ 
+    .factura{
+        width: 35%;
+        margin-left: auto; 
+
+        .factura-titulo{
+            display: flex;
+            justify-content: center;
+            align-items: center;     
+        }
+
+        .factura-contenido{
+            display: flex;
+            justify-content: space-between;
+            border: 2px solid rgb(194, 184, 184);
+            border-radius: 0.3rem;
+             
+            .eliminar{
+                text-align: center;
+                margin-left: 12%;
+                margin-top: 1rem;
+            }
+             
+            .imagen{
+                img{ 
+                    width: 3rem;
+                    height: 3rem;
+                    margin-top: 1.5rem;
+                }
+            }
+ 
+            .descripcion{
+                text-align: left;
+                h4{
+                    font-size: 1rem;
+                    font-style: italic;
+                    color: #6C757D;
+                }
+            }
+ 
+            .precio{
+                margin-right: 1.5rem;
+                margin-top: 1rem; 
+            }
+        }
+ 
+        .factura-precios{
+            display: flex;
+            width: 100%;
+            justify-content: space-between;
+            color: white;
+            margin: auto;
+            margin-top: 1rem;
+ 
+            .b-imponible{
+                background: #6C757D;
+                width: 33%;
+                text-align: center;
+                font-size: smaller;
+            }
+ 
+            .iva{
+                width: 33%;
+                background: #6C757D;
+                text-align: center;
+                font-size: smaller;
+            }
+ 
+            .total{
+                width: 33%;
+                text-align: center;
+                font-weight: bold;
+                background: #262626;
+                font-size: smaller;
+            }
+        }
+ 
+        .factura-botones{
+            display: flex;
+            justify-content: center;
+             
+            .boton-eliminar{     
+                margin: 0.5rem;
+
+                button{
+                    width: max-content;
+                    padding: 0.7rem 3rem;
+                    background: #DC3545;
+                    border: none;
+                    border-radius: 0.3rem;
+                    color: white;
+                    font-weight: bold;
+                    font-size: 1.2rem;
+                    cursor: pointer;
+                }
+            }
+ 
+            .boton-cobrar{
+                margin: 0.5rem;
+ 
+                button{
+                    width: max-content;
+                    padding: 0.7rem 3rem;
+                    background: #198754;
+                    border: none;
+                    border-radius: 0.3rem;
+                    color: white;
+                    font-weight: bold;
+                    font-size: 1.2rem;
+                    cursor: pointer;
+                }
+            }
+        }
+    }
+ 
+    .seleccion{
+        width: 55%;
+        margin: auto;
+ 
+        .seleccion-titulo{
+            width: 100%;
+            display: flex;
+            justify-content: center;
+            
+            h2{
+                font-size: 1.5rem;
+                font-weight: lighter;
+            }
+        }
+ 
+        .seleccion-pestañas{
+            display: flex;         
+ 
+            .inicio{
+                margin-right: 0.5rem;
+
+                button{
+                    display: flex;
+                    color: white;
+                    padding: 0.7rem 1rem;
+                    font-size: 0.8rem;
+                    background: #8f9292;
+                    border: none;  
+                    cursor: pointer;
+                 
+                    svg{
+                         width: 1.5rem;
+                         height: 1rem;
+                    }
+ 
+                    &:hover{
+                         background: #6e7576;
+                    }
+                }
+            }
+
+            .categorias{
+                button{
+                    display: flex;
+                    color: white;
+                    border: none;
+                    cursor: pointer;
+                    background: #818b8c;
+                    padding: 0.7rem 1rem;
+                    font-size: 0.8rem;
+ 
+                    svg{
+                        width: 1.5rem;
+                        height: 1rem;
+                    }
+ 
+                    &:hover{
+                        background: #6e7576;
+                    }
+                }
+            }
+
+            .tapas{
+                width: 320%;
+                margin-left: auto;
+
+                button{
+                    display: flex;
+                    color: white;
+                    border: none;
+                    cursor: pointer;
+                    background: #818b8c;
+                    padding: 0.7rem 1rem;
+                    font-size: 0.8rem;
+ 
+                    svg{
+                        width: 1.5rem;
+                        height: 1rem;
+                    }
+ 
+                    &:hover{
+                        background: #6e7576;
+                    }
+                }
+            }
+        }
+ 
+        .seleccion-producto{
+            width: 100%;
+            display: flex;
+            margin-top: 1rem;
+ 
+            .producto{
+                width: 80%;
+                margin-right: auto;
+               
+                .imagen{
+                    img{
+                        width: 80%;
+                        border: 1px solid rgb(213, 203, 203);
+                    }
+                }
+ 
+                .p-titulo{
+                    margin: auto;
+                    width: 50%;
+                }
+            }
+        }
+    }
+}
+/* //////////////////
+
+Para ventas
+
+*///////////////////
+.ventas{
+    width: 100%;
+    display: flex;
+ 
+    .factura{
+        width: 35%;
+        margin-left:auto ;
+        
+        .factura-titulo{
+            width: 100%;
+            display: flex;
+            justify-content: center;
+            align-items: center;     
+        }
+        
+        .fecha{
+            display: flex;
+            justify-content: space-between;
+            padding: 1rem;
+            div{
+                input{
+                    padding-left: 1.2rem;
+                }
+            }
+        }
+ 
+        .mesa{
+            display: flex;
+            justify-content: space-between;
+            padding: 1rem;       
+        }
+ 
+        .filtro{
+            button{
+                width: 92.5%;
+                background: #0D6EFC;
+                border: none;
+                border-radius: 0.3rem;
+                color: white;
+                padding: 0.7rem 1rem;
+                font-size: 0.8rem;
+                cursor: pointer;
+                margin-left: 1rem;
+                margin-top: 1rem;
+            }
+        }
+        
+        .descripciones{
+            border: 1px solid rgb(213, 203, 203);
+            border-radius: 0.3rem;
+            margin-top: 1rem;
+            overflow-y: scroll;
+
+            .descripcion-seleccionada{
+                display: flex;
+                justify-content: space-between;
+                padding: 0.4rem;
+                background: #0D6EFC;
+                color: white;
+            }
+    
+            .descripcion{
+                display: flex;
+                justify-content: space-between;
+                padding: 0.4rem;
+            }
+        }
+
+        .ingresos{
+            display: flex;
+            background: #869092;
+            margin-top: 1rem;
+            font-size: 1rem;
+            color: white;
+            font-weight: bold;
+
+            .total{
+                width: 50%;
+                text-align: center;
+                font-weight: bold;
+                font-size: smaller;
+            }
+
+            .linea{
+                border: white 1px solid;
+                height: 30%;
+            }
+
+            .media{
+                width: 50%;
+                text-align: center;
+                font-weight: bold;
+                font-size: smaller;
+            }
+        }
+    }
+ 
+    .numero-venta{
+        width: 55%;
+        margin: auto;
+
+        .venta-titulo{
+            h2{
+            text-align: center;
+            }
+        }
+
+        .datos-venta{
+            margin: auto;        
+            border: 1px solid rgb(213, 202, 202);
+            border-radius: 0.3rem;
+            .excel{
+                border: 1px solid rgb(208, 198, 198);
+                button{
+                    border: none;
+                    width: 100%;
+                    text-align: end;
+                    padding: 0.5rem;
+                    
+                    svg{
+                        width: 2rem;
+                        height: 2rem;
+                    }
+                }
+            }
+    
+            .datos{
+                padding: 1rem;
+
+                p{
+                    font-size: 1rem;
+                    font-weight: bold;
+                }
+            }
+        }
+
+        .venta{
+            margin-top: 1rem;
+
+            table{
+                tr{
+                    th{           
+                        font-size: 1rem;
+                        font-weight: bold;
+                        border-bottom: 0.3rem solid rgb(22, 21, 21);
+                    }
+
+                    td{
+                        font-size: 0.8rem;
+                        padding: 0.5rem;
+                        width: 25%;
+                        text-align: center;
+                        img{
+                            width:50%
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
+/* //////////////////
+
+Panel de Administracion de IVA
+
+*///////////////////
+
+.IVA{
+    width: 80%;
+    margin: auto;
+    .titulo{
+        height: 13%;
+
+        h2{
+            padding-top: 1rem;
+            font-size: medium;
+        }
+
+        h1{
+            padding-bottom: 1rem;
+        }
+    }
+
+    .hamburguesa{
+        position: absolute;
+        top: 3rem;
+        left: 2.5rem;
+  
+        button{
+            padding: 0.4rem 0.4rem;
+            background: #d7d2d2;
+            border: #8f9292 solid 1px;
+            border-radius: 0.2rem;
+            cursor: pointer;
+            svg{
+                width: 1.5rem;
+                height: 1rem;
+            }
+
+            &:hover{
+                background: #8f9292;
+            }
+        }
+    }
+
+    .añadir-iva{
+        text-align: end;
+        width: 100%;
+        margin-top: 4rem;
+        
+        .añadir-iva-btn{
+            color: white;
+            background: #0069FD;
+            border: none;
+            border-radius: 0.3rem;
+            padding: 0.7rem 1rem;
+            font-size: 1rem;
+            cursor: pointer;
+            margin-top: 1rem;
+
+            &:hover{
+                background: #0059E3;
+            }
+            
+        }
+    }
+
+    .añadir-mesa{
+        display: none;
+        
+
+        &.activado{
+            display: block;
+            border-radius: 0.3rem;
+            border: #8f9292 solid 1px;
+            height: 100%;
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            background: rgba(0,0,0,0.5);
+            z-index: 1;
+            justify-content: center;
+            align-items: center;
+            flex-direction: column;
+            padding-top: 2rem;
+        }
+
+        .mesa{
+            width: 40%;
+            margin: auto;
+            background: white;
+            border-radius: 0.3rem;
+            border: #cbd2d2 solid 1px;
+
+            .añadir-mesa-titulo{
+                width: 90%;
+                margin: auto;
+                display: flex;
+                justify-content: space-between;
+                
+            }
+            .añadir-mesa-descripcion{
+                padding: 1rem;
+                border-top: #cbd2d2 solid 1px;
+                border-bottom: #cbd2d2 solid 1px;
+                width: 90%;
+                margin: auto;
+                
+                .añadir-mesa-tipo{
+        
+                    div{
+                        padding: 0.5rem;
+                        input{
+                            width: 100%;
+                            padding: 0.4rem;
+                            border: #cbd2d2 solid 1px;
+                            border-radius: 0.3rem;
+                        }
+                    }
+                }
+
+                .añadir-mesa-vigente{
+                    
+                    div{
+                        padding: 0.5rem;
+                        select{
+                            width: 100%;
+                            padding: 0.4rem;
+                            border: #cbd2d2 solid 1px;
+                            border-radius: 0.3rem;
+                        }
+                    }
+                }
+            }
+    
+            .añadir-mesa-botones{
+                text-align: end;
+                padding: 0.7rem;
+    
+                .añadir-mesa-cerrar{
+                    border: none;
+                    border-radius: 0.3rem;
+                    font-size: 1.2rem;
+                    cursor: pointer;
+                    color: white;
+                    background: #6C757D;
+                    padding: 0.5rem;
+
+                    &:hover{
+                        background: #5C6D77;
+                    }
+                }
+    
+                .añadir-mesa-confirmar{
+                    background: #0069FD;
+                    border: none;
+                    border-radius: 0.3rem;
+                    color: white;
+                    font-size: 1.2rem;
+                    padding: 0.5rem;
+                    cursor: pointer;
+
+                    &:hover{
+                        background: #0060E9;
+                    }
+                }
+            }
+        }
+    }
+
+    .eliminar-iva{
+        display: none;
+        
+
+        &.activado{
+            display: block;
+            border-radius: 0.3rem;
+            border: #8f9292 solid 1px;
+            height: 100%;
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            background: rgba(0,0,0,0.5);
+            z-index: 1;
+            justify-content: center;
+            align-items: center;
+            flex-direction: column;
+            padding-top: 2rem;
+        }
+
+        .mesa{
+            width: 40%;
+            margin: auto;
+            background: white;
+            border-radius: 0.3rem;
+            border: #cbd2d2 solid 1px;
+
+            .eliminar-iva-titulo{
+                width: 90%;
+                margin: auto;
+                display: flex;
+                justify-content: space-between;
+                
+            }
+            .eliminar-iva-descripcion{
+                padding: 1rem;
+                border-top: #cbd2d2 solid 1px;
+                border-bottom: #cbd2d2 solid 1px;
+                width: 90%;
+                margin: auto;
+                
+                .añadir-mesa-tipo{
+        
+                    div{
+                        padding: 0.5rem;
+                        input{
+                            width: 100%;
+                            padding: 0.4rem;
+                            border: #cbd2d2 solid 1px;
+                            border-radius: 0.3rem;
+                        }
+                    }
+                }
+
+                .añadir-mesa-vigente{
+                    
+                    div{
+                        padding: 0.5rem;
+                        select{
+                            width: 100%;
+                            padding: 0.4rem;
+                            border: #cbd2d2 solid 1px;
+                            border-radius: 0.3rem;
+                        }
+                    }
+                }
+            }
+    
+            .eliminar-iva-botones{
+                text-align: end;
+                padding: 0.7rem;
+    
+                .eliminar-iva-btn-cerrar{
+                    border: none;
+                    border-radius: 0.3rem;
+                    font-size: 1.2rem;
+                    cursor: pointer;
+                    color: white;
+                    background: #6C757D;
+                    padding: 0.5rem;
+
+                    &:hover{
+                        background: #5C6D77;
+                    }
+                }
+    
+                .eliminar-iva-btn-eliminar{
+                    background: #DC3545;
+                    border: none;
+                    border-radius: 0.3rem;
+                    color: white;
+                    font-size: 1.2rem;
+                    padding: 0.5rem;
+                    cursor: pointer;
+
+                    &:hover{
+                        background: #D12E44;
+                    }
+                }
+            }
+        }
+    }
+
+    .tabla{
+        
+        margin-top: 1rem;
+        table{
+            width: 100%;
+
+            .tabla-titulos{
+                background: #C9E7FF;
+                
+
+                th{
+                    padding: 0.5rem;
+                    border-bottom: 2px solid rgb(17, 12, 12);
+                }
+            }
+
+            .tabla-informacion{
+                
+                td{
+                    text-align: center;
+                    padding: 0.8rem;
+                    border: 1px solid rgb(227, 222, 222);
+
+                    .tabla-btn-editar{
+                        color: white;
+                        background: #198754;
+                        border: none;
+                        border-radius: 0.3rem;
+                        cursor: pointer;
+                        padding: 0.4rem 0.4rem;
+                        svg{
+                            width: 1.5rem;
+                            height: 1.5rem;
+                        }
+
+                        &:hover{
+                            background: #1d5f41;
+                        }
+                    }
+
+                    .tabla-btn-eliminar{
+                        background: #DC3545;
+                        border: none;
+                        border-radius: 0.3rem;
+                        cursor: pointer;
+                        padding: 0.4rem 0.4rem;
+
+                        svg{
+                            width: 1.5rem;
+                            height: 1.5rem;
+                            color: white;
+                        }
+
+                        &:hover{
+                            background: #C92222;
+                        }
+                    }
+                }
+            }
+        }
+
+        .buscador-btn{
+            margin-top: 2rem;
+            text-align: center;
+
+            button{
+                background: white;
+                border: none;
+                border-radius: 0.3rem;
+                cursor: pointer;
+                color: #0069FD;
+                padding: 0.4rem 0.5rem;
+                font-size: 1rem;
+                margin-left: 0.5rem;
+                margin-top: 0.5rem;
+
+                &:hover{
+                    background: #0069FD;
+                    color: white;
+                }
+            }
+            
+        }
+    }
+}
+
+/* //////////////////
+
+Para todo el resto de la pagina
+
+*///////////////////
+.titulo{
+    width: 100%;
+    background: #abadad6a;
+    text-align: center;
+    font-weight: lighter;
+}
+
+h1,h2,h3,h4,h5,h6,p,span,a,ul,li,label,input,button,div{
+    font-family: 'Abel', sans-serif;
+    font-weight: lighter;
+}
+
+img{
+    width: 100%;
+}

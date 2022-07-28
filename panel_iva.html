@@ -1,0 +1,146 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+    <div class="IVA">
+        <div class="titulo">
+            <h2>PANEL DE ADMINISTRACIÓN</h2>
+            <h1>IVA</h1>
+        </div>
+
+        <div class="hamburguesa">
+            <button>
+                <svg viewBox="0 0 24 24">
+                    <path fill="currentColor" d="M3,6H21V8H3V6M3,11H21V13H3V11M3,16H21V18H3V16Z" />
+                </svg>
+            </button>
+        </div>
+
+        <div class="añadir-mesa">
+            <div class="mesa">
+                <div class="añadir-mesa-titulo">
+                    <div><h2>AÑADIR MESA</h2></div>
+                    <div><h2 class="cerrar-icono">X</h2></div>
+                </div>
+                <div class="añadir-mesa-descripcion">
+                    <div class="añadir-mesa-tipo">
+                        <div>
+                            <label for="">Tipo</label>
+                        </div>
+                        <div>
+                            <input type="text" placeholder="Escribe el tipo de IVA">
+                        </div>
+                    </div>
+                    <div class="añadir-mesa-vigente">
+                        <div>
+                            <label for="">Vigente</label>
+                        </div>
+                        <div>
+                            <select name="" id="">
+                                <option value="">Si</option>
+                            </select>
+                        </div>
+                    </div>
+                </div>
+                <div class="añadir-mesa-botones">
+                    <button class="añadir-mesa-cerrar">CERRAR</button>
+                    <button class="añadir-mesa-confirmar">CONFIRMAR</button>
+                </div>
+            </div>
+        </div>
+
+        <div class="eliminar-iva">
+            <div class="mesa">
+                <div class="eliminar-iva-titulo">
+                    <div><h2>ELIMINAR IVA</h2></div>
+                    <div><h2 class="cerrar-icono-iva">X</h2></div>
+                </div>
+                <div class="eliminar-iva-descripcion">
+                    <p>Está a punto de borrar un iva. ¿Está completamente seguro de realizar esta acción?</p>
+                </div>
+                <div class="eliminar-iva-botones">
+                    <button class="eliminar-iva-btn-cerrar">CERRAR</button>
+                    <button class="eliminar-iva-btn-eliminar">ELIMINAR</button>
+                </div>
+            </div>
+        </div>
+
+        <div class="añadir-iva">
+            <button class="añadir-iva-btn">+ Añadir iva</button>
+        </div>
+
+        <div class="tabla">
+            <table>
+                <tr class="tabla-titulos">
+                    <th>Tipo</th>
+                    <th>Vigente</th>
+                    <th>Opciones</th>
+                </tr>
+                <tr class="tabla-informacion">
+                    <td>1</td>
+                    <td>21%</td>
+                    <td>
+                        <button class="tabla-btn-editar">
+                            <svg viewBox="0 0 24 24">
+                                <path fill="currentColor" d="M5,3C3.89,3 3,3.89 3,5V19A2,2 0 0,0 5,21H19A2,2 0 0,0 21,19V12H19V19H5V5H12V3H5M17.78,4C17.61,4 17.43,4.07 17.3,4.2L16.08,5.41L18.58,7.91L19.8,6.7C20.06,6.44 20.06,6 19.8,5.75L18.25,4.2C18.12,4.07 17.95,4 17.78,4M15.37,6.12L8,13.5V16H10.5L17.87,8.62L15.37,6.12Z" />
+                            </svg>
+                        </button>
+                        <button class="tabla-btn-eliminar">
+                            <svg viewBox="0 0 24 24">
+                                <path fill="currentColor" d="M19,4H15.5L14.5,3H9.5L8.5,4H5V6H19M6,19A2,2 0 0,0 8,21H16A2,2 0 0,0 18,19V7H6V19Z" />
+                            </svg>
+                        </button>
+                  </td>
+                </tr>
+                <tr class="tabla-informacion">
+                    <td>2</td>
+                    <td>10%</td>
+                    <td>
+                        <button class="tabla-btn-editar">
+                            <svg  viewBox="0 0 24 24">
+                                <path fill="currentColor" d="M5,3C3.89,3 3,3.89 3,5V19A2,2 0 0,0 5,21H19A2,2 0 0,0 21,19V12H19V19H5V5H12V3H5M17.78,4C17.61,4 17.43,4.07 17.3,4.2L16.08,5.41L18.58,7.91L19.8,6.7C20.06,6.44 20.06,6 19.8,5.75L18.25,4.2C18.12,4.07 17.95,4 17.78,4M15.37,6.12L8,13.5V16H10.5L17.87,8.62L15.37,6.12Z" />
+                            </svg>
+                        </button>
+                        <button class="tabla-btn-eliminar">
+                            <svg  viewBox="0 0 24 24">
+                                <path fill="currentColor" d="M19,4H15.5L14.5,3H9.5L8.5,4H5V6H19M6,19A2,2 0 0,0 8,21H16A2,2 0 0,0 18,19V7H6V19Z" />
+                            </svg>
+                        </button>
+                    </td>
+                </tr>
+                <tr class="tabla-informacion">
+                    <td>3</td>
+                    <td>4%</td>
+                    <td>
+                        <button class="tabla-btn-editar">
+                            <svg viewBox="0 0 24 24">
+                                <path fill="currentColor" d="M5,3C3.89,3 3,3.89 3,5V19A2,2 0 0,0 5,21H19A2,2 0 0,0 21,19V12H19V19H5V5H12V3H5M17.78,4C17.61,4 17.43,4.07 17.3,4.2L16.08,5.41L18.58,7.91L19.8,6.7C20.06,6.44 20.06,6 19.8,5.75L18.25,4.2C18.12,4.07 17.95,4 17.78,4M15.37,6.12L8,13.5V16H10.5L17.87,8.62L15.37,6.12Z" />
+                            </svg>
+                        </button>
+                        <button class="tabla-btn-eliminar">
+                            <svg viewBox="0 0 24 24">
+                                <path fill="currentColor" d="M19,4H15.5L14.5,3H9.5L8.5,4H5V6H19M6,19A2,2 0 0,0 8,21H16A2,2 0 0,0 18,19V7H6V19Z" />
+                            </svg>
+                        </button>
+                    </td>
+                </tr>
+            </table>
+
+            <div class="buscador-btn">
+                <button>«</button>
+                <button>1</button>
+                <button>2</button>
+                <button>3</button>
+                <button>»</button>
+            </div>
+        </div>
+    </div>
+</body>
+
+    <script type="module" src="js/aplicacion.js"></script>
+</html>

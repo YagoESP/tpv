@@ -1,0 +1,143 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+    <div class="titulo">
+        <h1>TPV</h1>
+    </div>
+    <div class="categorias">
+        <div class="eliminar-ticket">
+            <div class="ticket">
+                <div class="eliminar-ticket-titulo">
+                    <div><h2>Eliminar ticket</h2></div>
+                    <div><h2 class="cerrar-icono-eliminar">X</h2></div>
+                </div>
+                <div class="eliminar-ticket-descripcion">
+                    <p>Está a punto de borrar el pedido sin ser cobrado.
+                         ¿Está completamente seguro de realizar esta acción?
+                    </p>
+                </div>
+                <div class="eliminar-ticket-botones">
+                    <button class="ticket-btn-cerrar-e">CERRAR</button>
+                    <button class="ticket-btn-eliminar">ELIMINAR</button>
+                </div>
+            </div>
+        </div>
+        <div class="cobrar-ticket">
+            <div class="ticket">
+                <div class="cobrar-ticket-titulo">
+                    <div><h2>Metodo de pago</h2></div>
+                    <div><h2 class="cerrar-icono-cobrar">X</h2></div>
+                </div>
+                <div class="cobrar-ticket-pago">
+                    <button class="ticket-btn-seleccionar">EFECTIVO</button>
+                    <button class="ticket-btn-seleccionar">TARJETA</button>
+                    <button class="ticket-btn-seleccionar">BIZUM </button>
+                </div>
+                <div class="cobrar-ticket-botones">
+                    <button class="ticket-btn-cerrar-c">CERRAR</button>
+                </div>
+            </div>
+        </div>
+        <div class="factura">
+            <div class="factura-titulo">
+                <h2>Ticket Mesa</h2>
+            </div>
+    
+            <div class="factura-contenido">
+                <div class="eliminar">
+                    <h4>X</h4>
+                </div>
+                <div class="imagen">
+                    <img src="imagenes/espinacas.jpg" alt="">
+                </div>
+                <div class="descripcion">
+                    <h4>Tapas</h4>
+                    <p>Espinacas</p>
+                </div>
+                <div class="precio">
+                    <h4>5.00€</h4>
+                </div>
+            </div>
+    
+            <div class="factura-precios">
+                <div class="b-imponible">
+                    <p>B. Imponible </p>
+                    <p>8.50€</p>
+                </div>
+                <div class="iva">
+                    <p>IVA (21)%</p>
+                    <p>1.79€</p>
+                </div>
+                <div class="total">
+                    <p>TOTAL</p>
+                    <p> 10.29€</p>
+                </div>
+            </div>
+            <div class="factura-botones">
+                <div class="boton-eliminar">
+                    <button>ELIMINAR</button>
+                </div>
+                <div class="boton-cobrar">
+                    <button>COBRAR</button>
+                </div>
+            </div>
+        </div>
+    
+        <div class="seleccion">
+            <div class="seleccion-titulo">
+                <h2>CATEGORÍAS</h2>
+            </div>
+    
+            <div class="seleccion-pestañas">
+                <div class="Inicio">
+                    
+                    <button>
+                        <svg  viewBox="0 0 24 24">
+                            <path fill="currentColor" d="M10,20V14H14V20H19V12H22L12,3L2,12H5V20H10Z" />
+                        </svg>
+                        INICIO
+                    </button>
+                </div>
+                <div class="Categorias">
+                    <button>
+                        <svg  viewBox="0 0 24 24">
+                            <path fill="currentColor" d="M4 7V19H19V21H4C2 21 2 19 2 19V7H4M21 5V15H8V5H21M21.3 3H7.7C6.76 3 6 3.7 6 4.55V15.45C6 16.31 6.76 17 7.7 17H21.3C22.24 17 23 16.31 23 15.45V4.55C23 3.7 22.24 3 21.3 3M9 6H12V11H9V6M20 14H9V12H20V14M20 8H14V6H20V8M20 11H14V9H20V11Z" />
+                        </svg>
+                        CATEGORIAS
+                    </button>
+                </div>
+            </div>
+    
+            <div class="seleccion-producto">
+                <div class="producto">
+                    <div class="imagen">
+                        <img src="imagenes/refresco.jpg" alt="">
+                    </div>
+                    <div class="p-titulo">
+                        <h3>Refrescos</h3>
+                    </div>
+                </div>
+                <div class="producto">
+                    <div class="imagen">
+                        <img src="imagenes/tapas.jpg" alt="">
+                    </div>
+                    <div class="p-titulo">
+                        <h3>Tapas</h3>
+                    </div>
+                </div>
+                <div class="producto">
+                    
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+
+    <script type="module" src="js/aplicacion.js"></script>
+</html>

@@ -1,0 +1,104 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+    <div class="titulo">
+        <h1>TPV</h1>
+    </div>
+    <div class="mesas">
+
+        <div class="eliminar-ticket">
+            <div class="ticket">
+                <div class="eliminar-ticket-titulo">
+                    <div><h2>Eliminar ticket</h2></div>
+                    <div><h2 class="cerrar-icono-eliminar">X</h2></div>
+                </div>
+                <div class="eliminar-ticket-descripcion">
+                    <p>Está a punto de borrar el pedido sin ser cobrado.
+                         ¿Está completamente seguro de realizar esta acción?
+                    </p>
+                </div>
+                <div class="eliminar-ticket-botones">
+                    <button class="ticket-btn-cerrar-e">CERRAR</button>
+                    <button class="ticket-btn-eliminar">ELIMINAR</button>
+                </div>
+            </div>
+        </div>
+        <div class="cobrar-ticket">
+            <div class="ticket">
+                <div class="cobrar-ticket-titulo">
+                    <div><h2>Metodo de pago</h2></div>
+                    <div><h2 class="cerrar-icono-cobrar">X</h2></div>
+                </div>
+                <div class="cobrar-ticket-pago">
+                    <button class="ticket-btn-seleccionar">EFECTIVO</button>
+                    <button class="ticket-btn-seleccionar">TARJETA</button>
+                    <button class="ticket-btn-seleccionar">BIZUM </button>
+                </div>
+                <div class="cobrar-ticket-botones">
+                    <button class="ticket-btn-cerrar-c">CERRAR</button>
+                </div>
+            </div>
+        </div>
+        
+        <div class="factura">
+            <div class="factura-titulo">
+                <h2>Ticket Mesa</h2>
+            </div>
+    
+            <div class="factura-contenido">
+                <h4>No hay productos añadidos aun.</h4>
+            </div>
+    
+            <div class="factura-precios">
+                <div class="b-imponible">
+                    <p>B. Imponible </p>
+                    <p>0€</p>
+                </div>
+                <div class="iva">
+                    <p>IVA ()%</p>
+                    <p>0€</p>
+                </div>
+                <div class="total">
+                    <p>TOTAL</p>
+                    <p> 0€</p>
+                </div>
+            </div>
+            <div class="factura-botones">
+                <div class="boton-eliminar">
+                    <button>ELIMINAR</button>
+                </div>
+                <div class="boton-cobrar">
+                    <button>COBRAR</button>
+                </div>
+            </div>
+        </div>
+    
+        <div class="numero-de-mesas">
+            <div class="mesa-titulo">
+                <h2>Mesas</h2>
+            </div>
+
+            <div class="numero">
+                <ul>
+                    <li>1</li>
+                    <li>2</li>
+                    <li>3</li>
+                    <li>4</li>
+                    <li>5</li>
+                    <li>6</li>
+                    <li>7</li>
+                    <li>8</li>
+                    <li>9</li>
+                </ul>
+            </div>
+        </div>
+    </div>
+</body>
+<script type="module" src="js/aplicacion.js"></script>
+</html>
